@@ -4,7 +4,8 @@
              (sdl2 video))
 
 (define (draw ren)
-  (let* ((surface (load-bmp "/home/amccartn/src/github.com/adammccartney/elementary-harmonies/img/hello.bmp"))
+  (let* ((surface (load-bmp
+                    "./img/hello.bmp"))
          (texture (surface->texture ren surface)))
     (clear-renderer ren)
     (render-copy ren texture)
