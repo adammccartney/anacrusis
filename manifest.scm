@@ -1,6 +1,7 @@
 (specifications->manifest
   (list 
-    "guile"
-    "sdl2"
-    "sdl2-image"
-    "guile-sdl2@0.8.0"))
+   "guile"
+   "guile-chickadee"
+   "sdl2"
+   "sdl2-image"
+   "guile-sdl2@0.8.0"))
