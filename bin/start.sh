@@ -5,4 +5,10 @@ if ! [ -f "./manifest.scm" ]; then
     exit 1
 fi
 
-guix shell -m manifest.scm -- guile -s src/examples/poc-render.scm || echo "ERR - unknown error"
+SCRIPT="$1"
+if [ -z $SCRIPT ]; then
+    echo "ERR -- please specify a script";
+    exit 1
+fi
+
+guix shell -m manifest.scm -- guile -s $SCRIPT || echo "ERR - unknown error"
